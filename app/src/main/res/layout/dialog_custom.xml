@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/page_background">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:id="@+id/dialog_icon"
+        android:gravity="center"
+        android:background="@color/colorAccent"
+        android:src="@drawable/news_mtw"
+        android:scaleType="fitCenter"
+        android:contentDescription="@string/icon"/>
+
+    <TextView
+        android:id="@+id/text_dialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/example"
+        android:layout_below="@+id/dialog_icon"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:layout_marginLeft="@dimen/margin_small"
+        android:layout_marginRight="@dimen/margin_small"
+        android:layout_marginBottom="@dimen/margin_medium"
+        android:textSize="18sp"
+        style="@style/text_large"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal" />
+
+    <LinearLayout
+        android:id="@+id/sign_out_and_disconnect"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:layout_below="@id/text_dialog">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/button_cancel"
+            android:id="@+id/btn_dialog_cancel"
+            android:gravity="center_vertical|center_horizontal"
+            android:layout_marginBottom="@dimen/margin_medium"
+            android:textSize="22sp"
+            android:padding="@dimen/margin_medium"
+            android:layout_marginEnd="@dimen/margin_medium"
+            android:visibility="gone"
+            style="@style/button"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/button_ok"
+            android:id="@+id/btn_dialog"
+            android:gravity="center_vertical|center_horizontal"
+            android:layout_marginBottom="@dimen/margin_medium"
+            android:textSize="22sp"
+            style="@style/button"/>
+    </LinearLayout>
+
+</RelativeLayout>

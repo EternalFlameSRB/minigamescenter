@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start">
+
+<com.eternalflamelabs.minigames.games.connect4.view.MenuView
+    android:id="@+id/menuView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_bg"
+    tools:context="com.eternalflamelabs.minigames.games.connect4.GameMenuActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/toolbar"
+        app:popupTheme="?popupTheme"/>
+
+    <TextView
+        android:drawableStart="@drawable/ic_game_connect_four"
+        android:id="@+id/app_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:drawablePadding="10dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/toolbar"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:text="@string/game_connect_4"
+        android:textColor="@color/colorPrimary"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/play"
+        android:layout_below="@+id/app_name"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/activity_horizontal_margin"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"
+        android:paddingTop="@dimen/activity_horizontal_margin">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/play_with"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/option_title_size"
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:id="@+id/play_with"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/activity_vertical_margin">
+
+            <RadioButton
+                android:id="@+id/play_with_ai"
+                style="@style/radio_button_connect"
+                android:background="@drawable/radio_btn_selector_left_corner"
+                android:text="@string/opponent_ai" />
+
+            <RadioButton
+                android:id="@+id/play_with_friend"
+                style="@style/radio_button_connect"
+                android:background="@drawable/radio_btn_selector_right_corner"
+                android:text="@string/opponent_player" />
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/choose_your_color"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/option_title_size"
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:id="@+id/player1_disc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/disc_red"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/radio_btn_selector_red"
+                android:button="@null" />
+
+            <RadioButton
+                android:id="@+id/disc_yellow"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/radio_btn_selector_yellow"
+                android:button="@null" />
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/first_turn"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/option_title_size"
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:id="@+id/first_turn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/activity_vertical_margin">
+
+            <RadioButton
+                android:id="@+id/first_turn_player1"
+                style="@style/radio_button_connect"
+                android:textAllCaps="true"
+                android:background="@drawable/radio_btn_selector_left_corner"
+                android:text="@string/you" />
+
+            <RadioButton
+                android:id="@+id/first_turn_player2"
+                style="@style/radio_button_connect"
+                android:textAllCaps="true"
+                android:background="@drawable/radio_btn_selector_right_corner"
+                android:text="@string/opponent_ai" />
+        </RadioGroup>
+
+        <LinearLayout
+            android:id="@+id/level"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/difficulty"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/option_title_size"
+                android:textStyle="bold" />
+
+            <SeekBar
+                android:id="@+id/difficulty"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="2"
+                android:progress="3"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:text="@string/level_0"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/seekbar_text_size" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/level_1"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/seekbar_text_size" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:text="@string/level_2"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/seekbar_text_size"
+                    tools:ignore="RelativeOverlap" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/play"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:background="@color/colorPrimary"
+        android:text="@string/play"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/play_font_size"
+        android:textStyle="bold" />
+</com.eternalflamelabs.minigames.games.connect4.view.MenuView>
+
+    <android.support.design.widget.NavigationView
+        android:id="@+id/navigation_view"
+        style="@style/navigation"
+        app:headerLayout="@layout/drawer_header"
+        app:menu="@menu/drawer_menu"/>
+
+</android.support.v4.widget.DrawerLayout>

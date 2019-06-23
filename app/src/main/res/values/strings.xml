@@ -1,0 +1,75 @@
+<resources>
+    <string name="app_name">Mini Games Center</string>
+    <string name="shared_preference" translatable="false">com.eternalflamelabs.minigames.PREFERENCE_FILE</string>
+
+    <string name="menu_settings">Settings</string>
+    <string name="menu_about">About</string>
+    <string name="menu_game_center">Game Center</string>
+    <string name="menu_news">News</string>
+    <string name="menu_privacy">Privacy policy</string>
+    <string name="menu_project">MTW Project</string>
+    <string name="menu_profile">Profile</string>
+    <string name="menu_help">Help</string>
+    <string name="menu_home">Home</string>
+
+    <string name="button_cancel">Cancel</string>
+    <string name="button_ok">OK</string>
+
+    <string name="loading">Loading &#8230;</string>
+    <string name="please_wait">Please wait &#8230;</string>
+    <string name="not_connected">You are not connected to the internet. For this option you will need to have internet access.</string>
+
+    <string name="update_app_message">New version of application is available on Google Play Store. \n\n Would you like to get it now? \n</string>
+
+    <string name="open_source_game">This is a open source game, if you want to check the code and see the author of this game, click button to visit original repository.</string>
+
+    <string name="json_parsing_error">Json parsing error: </string>
+
+    <string name="example">Example</string>
+    <string name="icon">Application icon</string>
+    <string name="list_image">List image</string>
+    <string name="block_field">Block for play</string>
+    <string name="game_field">Game field</string>
+
+    <string name="empty_field">0</string>
+    <string name="newGame">New Game</string>
+    <string name="player_one">Player 1</string>
+    <string name="player_two">Player 2</string>
+    <string name="game_is_draw">No one win the game!</string>
+    <string name="player_one_wins">Player 1 wins the game!</string>
+    <string name="player_two_wins">Player 2 wins the game!</string>
+    <string name="player_one_turn">Player 1 turn.</string>
+    <string name="player_two_turn">Player 2 turn.</string>
+
+    <string name="game_tic_tac_toe">Tic Tac Toe</string>
+    <string name="game_connect_4">Connect 4</string>
+
+    <!-- Level -->
+    <string name="level_0">Easy</string>
+    <string name="level_1">Normal</string>
+    <string name="level_2">Hard</string>
+
+    <!-- game opponent modes -->
+    <string name="opponent_ai">COMPUTER</string>
+    <string name="opponent_player">FRIEND</string>
+
+    <string name="you">You</string>
+    <string name="restart_game">restart Game</string>
+    <string name="play">play</string>
+
+    <!-- game win modes -->
+    <string name="you_win">YOU WIN</string>
+    <string name="you_lose">YOU LOSE</string>
+    <string name="friend_win">FRIEND WINS</string>
+    <string name="draw">DRAW</string>
+    <string name="back">Back to menu?</string>
+    <string name="reset_game">Reset game?</string>
+    <string name="play_with">PLAY WITH</string>
+    <string name="choose_your_color">CHOOSE YOUR COLOR</string>
+    <string name="first_turn">FIRST TURN</string>
+    <string name="difficulty">DIFFICULTY</string>
+    <string name="no">No</string>
+    <string name="yes">Yes</string>
+    <string name="visit">Visit</string>
+
+</resources>
